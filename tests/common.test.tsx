@@ -7,6 +7,6 @@ import { MultiSelect } from '../src'
 
 describe('Common render', () => {
   it('renders multi select without crashing', () => {
-    render(<MultiSelect />)
+    render(<MultiSelect label='test' />)
   })
 })
