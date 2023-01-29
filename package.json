@@ -23,11 +23,15 @@
     "url": "git+https://github.com/umutdeveloper/react-multiselect.git"
   },
   "keywords": [
-    "react",
+    "combobox",
     "multiselect",
+    "form",
+    "input",
+    "react",
+    "react-component",
     "typescript",
     "select",
-    "dropdown",
+    "ui",
     "tailwind"
   ],
   "author": "Umut CAKIR (umutdeveloper)",
