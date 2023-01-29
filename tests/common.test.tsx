@@ -3,10 +3,19 @@ import { render } from '@testing-library/react'
 
 import 'jest-canvas-mock'
 
-import { MultiSelect } from '../src'
+import { MultiSelect, MultiSelectProps } from '../src'
 
 describe('Common render', () => {
   it('renders multi select without crashing', () => {
-    render(<MultiSelect label='test' />)
+    const props: MultiSelectProps = {
+      label: 'Tags',
+      name: 'tags',
+      size: 'small',
+      optionList: [{ label: 'desktop' }, { label: 'demo' }],
+      placeholder: 'Add tags',
+      value: ['desktop'],
+      valueChange: () => null,
+    }
+    render(<MultiSelect {...props} />)
   })
 })

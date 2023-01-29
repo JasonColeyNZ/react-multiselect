@@ -1,3 +1,3 @@
-import MultiSelect from './components/MultiSelect'
+import MultiSelect, { MultiSelectProps } from './components/MultiSelect'
 
-export { MultiSelect }
+export { MultiSelect, MultiSelectProps }

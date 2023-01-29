@@ -1,23 +1,22 @@
 {
   "name": "@uc-react-ui/multiselect",
-  "version": "0.0.2",
-  "description": "Simple React multi select component",
+  "version": "0.1.0",
+  "description": "Simple React multi select component with Tailwind CSS",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs && npm run postcss",
+    "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "build:dev": "npm run postcss && rm -r example/node_modules/@uc-react-ui && cd example && npm i",
+    "build:dev": "rm -r example/node_modules/@uc-react-ui/multiselect && cd example && npm i",
     "build:watch": "nodemon --watch src -e ts,tsx -x \"npm run build:dev\"",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
     "test": "jest --config jestconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run prettier && npm run lint",
-    "postcss": "postcss ./main.css -o dist/main.css",
-    "postcss:dev": "postcss ./main-dev.css -o example/src/main.css"
+    "postcss": "postcss ./main.css -o dist/main.css"
   },
   "repository": {
     "type": "git",
@@ -28,7 +27,8 @@
     "multiselect",
     "typescript",
     "select",
-    "dropdown"
+    "dropdown",
+    "tailwind"
   ],
   "author": "Umut CAKIR (umutdeveloper)",
   "license": "MIT",
@@ -44,6 +44,7 @@
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -60,6 +61,7 @@
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.2.4",
     "ts-jest": "^29.0.5",
+    "tslib": "^2.5.0",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
